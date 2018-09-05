@@ -27,13 +27,13 @@
 									</p>
 							</section>
 	            <section data-markdown>
-								<template data-template>
+								<script type = "text/template">
 									# Project highlights
 
 									* CityProfileR
 									* Tron - bandwidth
 									* Most of the work is in R; developing packages or a shiny app
-								</template>
+								</script>
 	            </section>
 
 	            <section>
@@ -42,20 +42,20 @@
 	                <h4>Prototype tool for visualising the Urban Forest data in an interactive way</h4>
 	            	</section>
 									<section data-markdown>
-										<template data-template>
+										<script type = "text/template">
 											## Aim
 
 											* App that allows interaction with the data
 											* Use at different levels of geography; street, parish, LSOA etc
 											* Some way to compare your street to another street
 											Prototype tool only used Cardiff.
-										</template>
+										</script>
 									</section>
 									<section data-markdown>
-										<template data-template>
+										<script type = "text/template">
 											## Polygons
 											![polygons](images-tree/polygons.PNG)
-										</template>
+										</script>
 									</section>
 									<section data-markdown>
 										<template data-template>
@@ -64,10 +64,10 @@
 										</template>
 									</section>
 									<section data-markdown>
-										<template data-template>
+										<script type = "text/template">
 											## More Markers!
 											![street](images-tree/street_light.PNG)
-										</template>
+										</script>
 									</section>
 								</section>
 
@@ -76,20 +76,20 @@
 	                <h2>CityProfileR Package</h2>
 	            	</section>
 								<section data-markdown>
-									<template data-template>
+									<script type = "text/template">
 										## CityProfileR (apologies for the obligatory capitalisation...)
 
 										* Currently holds the point, polygon and hexmap objects required for the shiny app
 										* It also contains any functions specific to visualising or subsetting the tree data
 										* Data manipulation function are taken out of the package, but are available in a single script in the repo
-									</template>
+									</script>
 								</section>
 								<section data-markdown>
-									<template data-template>
+									<script type = "text/template">
 										## CityProfileR Demo
 
 										[Hosted on datasciencecampus.shinyapps.io](www.bbc.co.uk)
-									</template>
+									</script>
 								</section>
 							</section>
 
@@ -100,23 +100,23 @@
 	                <p></p>
 								</section>
 									<section data-markdown>
-										<template data-template>
+										<script type = "text/template">
 										## Overview
 
 										* ~3 years of recording from 5 IXPs around the UK
 										* Records total internet traffic in 5 minute intervals
 										* Is human behaviour present and is it useful?
-									</template>
+									</script>
 								</section>
 							<section data-markdown>
-								<template data-template>
+								<script type = "text/template">
 									## Afternoon peaks
 									![august_plot](images-ixp/proof_plot_030816.png)
 									* Clear double peak behaviour.
-								</template>
+								</script>
 							</section>
 								<section data-markdown>
-									<template data-template>
+									<script type = "text/template">
 										## Morning Wake Up
 
 										* Are there differences in the speed of increase in internet consumption between days?
@@ -126,52 +126,52 @@
 										* Calculate a set of gradients and the ratio between these gradients
 										* Find some interesting anomalies
 
-									</template>
+									</script>
 								</section>
 								<section data-markdown>
-									<template data-template>
+									<script type = "text/template">
 										## Morning Wake up
 										![morning_method](images-ixp/morning_030816.png)
-									</template>
+									</script>
 								</section>
 								<section data-markdown>
-									<template data-template>
+									<script type = "text/template">
 										##### Is the rate dependent on trough depth
 										![no_link_proof](images-ixp/no_link_proof.png)
-									</template>
+									</script>
 								</section>
 								<section data-markdown>
-									<template data-template>
+									<script type = "text/template">
 										## Comparison of gradients
 										![grad_comparison](images-ixp/comp_grad_12_34_lon1.png)
-									</template>
+									</script>
 								</section>
 								<section data-markdown>
-									<template data-template>
+									<script type = "text/template">
 										## What is this outlier?
 										![outlier](images-ixp/basic_14_06_17.png)
-									</template>
+									</script>
 								</section>
 								<section data-markdown>
-									<template data-template>
+									<script type = "text/template">
 										## Is this present in Lon2?
 										![outlier_2](images-ixp/basic2_14_06_17.png)
-									</template>
+									</script>
 								</section>
 								<section data-markdown>
-									<template data-template>
+									<script type = "text/template">
 										## Forecasting and Decomposition
 
 										* Could hopefully be used to identify anomalies through deviation from the forecast.
 										* Multiple, complex seasonalities proved difficult to model.
 										* Regression tree, Singular Spectrum Analysis, LSTM used.
 
-									</template>
+									</script>
 								</section>
 	            </section>
 						</section>
 						<section data-markdown>
-							<template data-template>
+							<script type = "text/template">
 								## Learning Points
 
 								* Writing code that someone else can read
@@ -179,31 +179,41 @@
 								* Running an exploratory data analysis
 								* Preparing a project for open-sourcing and publishing.
 								* How present using reveal.js
-							</template>
+							</script>
 						</section>
 					</section>
 					<section data-markdown>
-						<template data-template>
+						<script type = "text/template">
 							## Thanks!
 
 							Any questions or thoughts?
 
 							Presentation made using reveal.js
-						</template>
+						</script>
 					</section>
 	        </div>
 	    </div>
 			<script src="lib/js/head.min.js"></script>
 			<script src="js/reveal.js"></script>
-
+			<!--<script src="plugin/markdown/marked.js"></script>
+			<script src="plugin/markdown/markdown.js"></script>-->
 			<script>
-				// More info about config & dependencies:
+				<!--// More info about config & dependencies:
 				// - https://github.com/hakimel/reveal.js#configuration
-				// - https://github.com/hakimel/reveal.js#dependencies
-				Reveal.initialize({
+				// - https://github.com/hakimel/reveal.js#dependencies-->
+					Reveal.initialize({
 					dependencies: [
-						{ src: 'plugin/markdown/marked.js' },
-						{ src: 'plugin/markdown/markdown.js' }
+						{ src: 'plugin/markdown/marked.js',
+							condition: function() {
+								return document.querySelector('[data-markdown]');
+							}
+						},
+						{ src: 'plugin/markdown/markdown.js' ,
+							condition: function() {
+								return document.querySelector('[data-markdown]');
+							}
+						}
+
 					]
 				});
 			</script>
