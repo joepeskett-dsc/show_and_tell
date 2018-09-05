@@ -1,0 +1,211 @@
+<!doctype html>
+<html>
+	<head>
+		<meta charset="utf-8">
+		<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
+
+		<title>reveal.js</title>
+
+		<link rel="stylesheet" href="css/reveal.css">
+		<link rel="stylesheet" href="css/theme/black.css">
+
+		<!-- Theme used for syntax highlighting of code -->
+		<link rel="stylesheet" href="lib/css/zenburn.css">
+
+		<!-- Printing and PDF exports -->
+
+	</head>
+	<body>
+
+	    <div class="reveal">
+
+	        <div class="slides">
+							<section>
+									<h1> Apprentice Show and Tell</h1>
+									<p>
+										<small>Joe Peskett</small>
+									</p>
+							</section>
+	            <section data-markdown>
+								<template data-template>
+									# Project highlights
+
+									* CityProfileR
+									* Tron - bandwidth
+									* Most of the work is in R; developing packages or a shiny app
+								</template>
+	            </section>
+
+	            <section>
+								<section>
+	                <h1>CityProfileR App</h1>
+	                <h4>Prototype tool for visualising the Urban Forest data in an interactive way</h4>
+	            	</section>
+									<section data-markdown>
+										<template data-template>
+											## Aim
+
+											* App that allows interaction with the data
+											* Use at different levels of geography; street, parish, LSOA etc
+											* Some way to compare your street to another street
+											Prototype tool only used Cardiff.
+										</template>
+									</section>
+									<section data-markdown>
+										<template data-template>
+											## Polygons
+											![polygons](images-tree/polygons.PNG)
+										</template>
+									</section>
+									<section data-markdown>
+										<template data-template>
+											## Markers
+											![Markers](images-tree/markers.PNG)
+										</template>
+									</section>
+									<section data-markdown>
+										<template data-template>
+											## More Markers!
+											![street](images-tree/street_light.PNG)
+										</template>
+									</section>
+								</section>
+
+	            <section>
+								<section>
+	                <h2>CityProfileR Package</h2>
+	            	</section>
+								<section data-markdown>
+									<template data-template>
+										## CityProfileR (apologies for the obligatory capitalisation...)
+
+										* Currently holds the point, polygon and hexmap objects required for the shiny app
+										* It also contains any functions specific to visualising or subsetting the tree data
+										* Data manipulation function are taken out of the package, but are available in a single script in the repo
+									</template>
+								</section>
+								<section data-markdown>
+									<template data-template>
+										## CityProfileR Demo
+
+										[Hosted on datasciencecampus.shinyapps.io](www.bbc.co.uk)
+									</template>
+								</section>
+							</section>
+
+	            <section>
+								<section>
+	                <h1>Tron:</h1>
+									<h3>Detecting collective human behaviour in internet bandwidth consumption data</h3>
+	                <p></p>
+								</section>
+									<section data-markdown>
+										<template data-template>
+										## Overview
+
+										* ~3 years of recording from 5 IXPs around the UK
+										* Records total internet traffic in 5 minute intervals
+										* Is human behaviour present and is it useful?
+									</template>
+								</section>
+							<section data-markdown>
+								<template data-template>
+									## Afternoon peaks
+									![august_plot](images-ixp/proof_plot_030816.png)
+									* Clear double peak behaviour.
+								</template>
+							</section>
+								<section data-markdown>
+									<template data-template>
+										## Morning Wake Up
+
+										* Are there differences in the speed of increase in internet consumption between days?
+										* Developed a **very** crude method to measure this rate each day.
+										* How long does it take to reach 2x the trough measure each day?
+										* Fill in the gaps with other thresholds
+										* Calculate a set of gradients and the ratio between these gradients
+										* Find some interesting anomalies
+
+									</template>
+								</section>
+								<section data-markdown>
+									<template data-template>
+										## Morning Wake up
+										![morning_method](images-ixp/morning_030816.png)
+									</template>
+								</section>
+								<section data-markdown>
+									<template data-template>
+										##### Is the rate dependent on trough depth
+										![no_link_proof](images-ixp/no_link_proof.png)
+									</template>
+								</section>
+								<section data-markdown>
+									<template data-template>
+										## Comparison of gradients
+										![grad_comparison](images-ixp/comp_grad_12_34_lon1.png)
+									</template>
+								</section>
+								<section data-markdown>
+									<template data-template>
+										## What is this outlier?
+										![outlier](images-ixp/basic_14_06_17.png)
+									</template>
+								</section>
+								<section data-markdown>
+									<template data-template>
+										## Is this present in Lon2?
+										![outlier_2](images-ixp/basic2_14_06_17.png)
+									</template>
+								</section>
+								<section data-markdown>
+									<template data-template>
+										## Forecasting and Decomposition
+
+										* Could hopefully be used to identify anomalies through deviation from the forecast.
+										* Multiple, complex seasonalities proved difficult to model.
+										* Regression tree, Singular Spectrum Analysis, LSTM used.
+
+									</template>
+								</section>
+	            </section>
+						</section>
+						<section data-markdown>
+							<template data-template>
+								## Learning Points
+
+								* Writing code that someone else can read
+								* Writing code that is not horribly inefficient
+								* Running an exploratory data analysis
+								* Preparing a project for open-sourcing and publishing.
+								* How present using reveal.js
+							</template>
+						</section>
+					</section>
+					<section data-markdown>
+						<template data-template>
+							## Thanks!
+
+							Any questions or thoughts?
+
+							Presentation made using reveal.js
+						</template>
+					</section>
+	        </div>
+	    </div>
+			<script src="lib/js/head.min.js"></script>
+			<script src="js/reveal.js"></script>
+
+			<script>
+				// More info about config & dependencies:
+				// - https://github.com/hakimel/reveal.js#configuration
+				// - https://github.com/hakimel/reveal.js#dependencies
+				Reveal.initialize({
+					dependencies: [
+						{ src: 'plugin/markdown/marked.js' },
+						{ src: 'plugin/markdown/markdown.js' }
+					]
+				});
+			</script>
+		</body>
+		</html>
