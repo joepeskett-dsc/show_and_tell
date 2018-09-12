@@ -51,6 +51,9 @@
 											Prototype tool only used Cardiff.
 										</textarea>
 									</section>
+									<section>
+										<div id="map_html" class="map"></div>
+									</section>
 									<section data-markdown>
 										<textarea data-template>
 											## Polygons
@@ -165,6 +168,17 @@
 										* Could hopefully be used to identify anomalies through deviation from the forecast.
 										* Multiple, complex seasonalities proved difficult to model.
 										* Regression tree, Singular Spectrum Analysis, LSTM used.
+
+									</textarea>
+								</section>
+								<section data-markdown>
+									<textarea data-template>
+										## LSTM
+
+										* A form of recurrent neural network that allows memory of long term dependencies
+										* Studies have looked at using this method: [Uber](https://eng.uber.com/neural-networks/), [Thesis](http://www.diva-portal.org/smash/get/diva2:1149130/FULLTEXT01.pdf)
+										* Not optimised but developed a working pipeline to work with the data in Keras
+										* Cross validation is also a challenge with timeseries data
 
 									</textarea>
 								</section>
