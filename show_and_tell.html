@@ -7,7 +7,7 @@
 		<title>reveal.js</title>
 
 		<link rel="stylesheet" href="css/reveal.css">
-		<link rel="stylesheet" href="css/theme/black.css">
+		<link rel="stylesheet" href="css/theme/simple.css">
 
 		<!-- Theme used for syntax highlighting of code -->
 		<link rel="stylesheet" href="lib/css/zenburn.css">
@@ -51,9 +51,6 @@
 											Prototype tool only used Cardiff.
 										</textarea>
 									</section>
-									<section>
-										<div id="map_html" class="map"></div>
-									</section>
 									<section data-markdown>
 										<textarea data-template>
 											## Polygons
@@ -80,7 +77,7 @@
 	            	</section>
 								<section data-markdown>
 									<textarea data-template>
-										## CityProfileR (apologies for the obligatory capitalisation...)
+										## CityProfileR
 
 										* Currently holds the point, polygon and hexmap objects required for the shiny app
 										* It also contains any functions specific to visualising or subsetting the tree data
@@ -91,7 +88,7 @@
 									<textarea data-template>
 										## CityProfileR Demo
 
-										[Hosted on datasciencecampus.shinyapps.io](www.bbc.co.uk)
+										[Hosted on datasciencecampus.shinyapps.io](https://datasciencecampus.shinyapps.io/cardiff_app/)
 									</textarea>
 								</section>
 							</section>
@@ -145,25 +142,25 @@
 								</section>
 								<section data-markdown>
 									<textarea data-template>
-										## Comparison of gradients
+										#### Comparison of gradients
 										![grad_comparison](images-ixp/comp_grad_12_34_lon1.png)
 									</textarea>
 								</section>
 								<section data-markdown>
 									<textarea data-template>
-										## What is this outlier?
+										#### What is this outlier?
 										![outlier](images-ixp/basic_14_06_17.png)
 									</textarea>
 								</section>
 								<section data-markdown>
 									<textarea data-template>
-										## Is this present in Lon2?
+										#### Is this present in Lon2?
 										![outlier_2](images-ixp/basic2_14_06_17.png)
 									</textarea>
 								</section>
 								<section data-markdown>
 									<textarea data-template>
-										## Forecasting and Decomposition
+										### Forecasting and Decomposition
 
 										* Could hopefully be used to identify anomalies through deviation from the forecast.
 										* Multiple, complex seasonalities proved difficult to model.
@@ -173,7 +170,7 @@
 								</section>
 								<section data-markdown>
 									<textarea data-template>
-										## LSTM
+										### LSTM
 
 										* A form of recurrent neural network that allows memory of long term dependencies
 										* Studies have looked at using this method: [Uber](https://eng.uber.com/neural-networks/), [Thesis](http://www.diva-portal.org/smash/get/diva2:1149130/FULLTEXT01.pdf)
@@ -184,15 +181,7 @@
 								</section>
 								<section data-markdown>
 									<textarea data-template>
-										## LSTM
-
-										![design](images-ixp/regresso_fit.PNG)
-										![models](images-ixp/saving_models.PNG)
-									</textarea>
-								</section>
-								<section data-markdown>
-									<textarea data-template>
-										## LSTM
+										### LSTM
 
 										![design](images-ixp/regresso_fit.PNG)
 										![models](images-ixp/saving_models.PNG)
@@ -202,8 +191,17 @@
 									<textarea data-template>
 										## Traffic Comparison
 
-										* Big data team recently presented on traffic data as indicator of GDP
+										* Already considered that the afternoon dip maybe indicator of commuting time
+										* Big data team recently presented on traffic data as lagged indicator of GDP
 										* Can internet traffic be used as an indicator for road traffic
+
+
+									</textarea>
+								</section>
+								<section data-markdown>
+									<textarea data-template>
+										## Traffic Comparison
+
 
 										![traffic](images-ixp/manc_2016.png)
 									</textarea>
