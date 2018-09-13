@@ -158,7 +158,7 @@
 								<section data-markdown>
 									<textarea data-template>
 										#### Morning Wake up
-										<img src="images-ixp/morning_030816.png" alt="drawing" width="558"/>
+										<img src="images-ixp/morning_030816.png" alt="drawing" width="800"/>
 									</textarea>
 								</section>
 								<section data-markdown>
@@ -187,11 +187,12 @@
 								</section>
 								<section data-markdown>
 									<textarea data-template>
-										### Forecasting and Decomposition
+										### Decomposition and Anomaly Detection
 
 										* Could hopefully be used to identify anomalies through deviation from the forecast.
 										* Multiple, complex seasonalities proved difficult to model.
 										* Regression tree, Singular Spectrum Analysis, LSTM used.
+										* SSA is very promising, Phil has focussed more on this.
 
 									</textarea>
 								</section>
@@ -203,6 +204,27 @@
 										* Studies have looked at using this method: [Uber](https://eng.uber.com/neural-networks/), [Thesis](http://www.diva-portal.org/smash/get/diva2:1149130/FULLTEXT01.pdf)
 										* Not optimised but developed a working pipeline to work with the data in Keras
 										* Cross validation is also a challenge with timeseries data
+
+									</textarea>
+								</section>
+								<section data-markdown>
+									<textarea data-template>
+										### LSTM - Implementation in Keras
+
+										* Requires 3D input array: features, sequences, observation
+											* Lag the X input
+											* Only one feature
+										* Select a batch size
+										* Architecture - simple as possible
+										* Stateful layers but reset after each epoch
+
+									</textarea>
+								</section>
+								<section data-markdown>
+									<textarea data-template>
+										### LSTM - Implementation in Keras
+
+										![Architecture](images-ixp/architecture.PNG)
 
 									</textarea>
 								</section>
